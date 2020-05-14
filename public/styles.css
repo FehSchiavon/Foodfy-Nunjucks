@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #fff;
+}
+
+body header,
+body main {
+    margin: 36px auto;
+    width: 940px;
+}
+
+header {
+    text-align: left;
+    margin: 36px 0px;
+}
+
+header .header-menu img {
+    margin-right: 122px;
+    cursor: pointer;
+    margin-left: -30px;
+}
+
+
+header .header-menu a {
+    text-decoration: none;
+    color: #111;
+    margin-left: 30px;
+}
+
+main {
+    width: 940px;
+    max-width: 940px;
+}
+
+main .slider {
+    background-color: #FBDFDB;
+    width: 940px;
+    height: 366px;
+    border-radius: 30px;
+}
+
+main .slider h1 {
+    position: relative;
+    padding-top: 117px;
+    padding-left: 60px;
+}
+
+main .slider p {
+    position: relative;
+    padding-top: 10px ;
+    padding-left: 60px;
+    width: 350px;
+}
+
+
+main .slider img {
+    position: relative;
+    left: 624px;
+    right: 100px;
+    top: -170px;
+}
+
+main .info {
+    margin: 50px 0px 20px 0px;
+    font-weight: bold;
+}
+
+main section .recipes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+main section .recipes .type-recipes img {
+    width: 300px;
+    height: 140px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+main section .recipes .type-recipes h3 {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+main section .recipes .type-recipes p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #777;
+}
+
+footer {
+    background-color: #eee;
+    text-align: center;
+    padding: 23px;
+    margin-top: 50px;
+    width: 100%;
+    position: static;
+}
+
+footer p {
+    color: #999;
+    font-size: 14px;
+}
+
+
+/* ===ABOUT=== */
+
+header nav .header-about-border {
+    font-weight: 700;
+}
+
+main .about-foodfy h2 {
+    padding-top: 10px;
+}
+
+main .about-foodfy h3 {
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+main .about-foodfy p {
+    color: #444;
+    font-size: 18px;
+    padding: 20px 0px;
+}
+
+/* === MODAL === */
+
+span .modal-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+span .modal {
+    background-color: white;
+    width: 660px;
+    height: 413px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+span .modal .close-modal img {
+    width: 600px;
+    height: 200px;
+    border-radius: 15px;
+    margin: 30px 0px 20px;
+}
+
+span .modal .close-modal h3 {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+span .modal .close-modal p {
+    font-size: 18px;
+    color: #777;
+    text-align: center;
+    margin-top: 5px;
+}
+
+span .modal .button-close p {
+    color: #999;
+    font-size: 16px;
+    margin-top: 60px;
+    cursor: pointer;
+}
+
+/* ===MODAL.ACTIVE===  */
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
