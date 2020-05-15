@@ -17,14 +17,15 @@
     </div>
 
     <section>
-        
+        {% for recipe in recipes %}
         <div class="recipes">
-            <div class="type-recipes" id="burger">
-                <img src="/assets/burger.png" alt="triple burger bacon">
-                <h3 class="whatRecipes">Triplo bacon burger</h3>
-                <p class="whatNameCreator">por Jorge Relato</p>
+            <div class="type-recipes" id="{{recipe.id}}">
+                <img src="/assets/{{recipe.id}}.png" alt="{{recipe.typeRecipe}}">
+                <h3 class="whatRecipes">{{recipe.typeRecipe}}</h3>
+                <p class="whatNameCreator">{{recipe.authorRecipe}}</p>
             </div>
         </div>
+        {% endfor %}
     </section>
 </main>
 
