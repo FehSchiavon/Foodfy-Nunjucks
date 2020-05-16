@@ -5,29 +5,29 @@
 {% endblock %}
 
 {% block content %}
-<main>
-    <div class="slider">
-        <h1>As melhores receitas</h1>
-        <p>Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro</p>
-        <img src="/assets/chef.png" alt="cooker">
-    </div>
 
-    <div class="info">
-        <h2>Mais acessadas</h2>
-    </div>
+<div class="slider">
+    <h1>As melhores receitas</h1>
+    <p>Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro</p>
+    <img src="/assets/chef.png" alt="cooker">
+</div>
 
-    <section>
+<div class="info">
+    <h2>Mais acessadas</h2>
+</div>
+
+<section>
+    <div class="recipes">
         {% for recipe in recipes %}
-        <div class="recipes">
-            <div class="type-recipes" id="{{recipe.id}}">
-                <img src="/assets/{{recipe.id}}.png" alt="{{recipe.typeRecipe}}">
-                <h3 class="whatRecipes">{{recipe.typeRecipe}}</h3>
-                <p class="whatNameCreator">{{recipe.authorRecipe}}</p>
-            </div>
+        <div class="type-recipes" id="{{recipe.id}}">
+            <img src="/assets/{{recipe.id}}.png" alt="{{recipe.typeRecipe}}">
+            <h3 class="whatRecipes">{{recipe.typeRecipe}}</h3>
+            <p class="whatNameCreator">{{recipe.authorRecipe}}</p>
         </div>
         {% endfor %}
-    </section>
-</main>
+    </div>
+</section>
+
 
 <span>
     <div class="modal-overlay">
