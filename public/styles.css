@@ -143,11 +143,20 @@ main .about-foodfy p {
     border-radius: 15px;
 }
 
-.name-description {
+.name-recipe {
     margin-top: 50px;
     text-align: center;
+}
+
+.name-recipe h3 {
     color: #111;
     font-size: 36px;
-    font-weight: 900;
+    font-weight: 700;
+}
 
+.name-recipe p {
+    margin-top: 4px;
+    font-weight: 400;
+    font-size: 20px;
+    color: #777;
 }
