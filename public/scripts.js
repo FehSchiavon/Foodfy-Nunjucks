@@ -1,55 +1,58 @@
-// const modalOverlay = document.querySelector('.modal-overlay')
-// const recipes = document.querySelectorAll('.type-recipes')
+//=== MOSTRAR E ESCONDER DOS BOTÕES (Porém não esta em todos os botões) ===//
 
+// let buttonDescription = document.querySelector('.stuff-button')
+// let infoDescription = document.querySelector('.fullStuff-description')
 
-// for (let recipe of recipes) {
-//     recipe.addEventListener('click', function(){
-//         modalOverlay.classList.add('active')
-
-//         const typeRecipesImg = recipe.getAttribute('id')
-//         modalOverlay.querySelector('img').src = `../layouts/assets/${typeRecipesImg}.png`
-
-//         const titleRecipes = recipe.querySelector('.whatRecipes').innerHTML
-//         modalOverlay.querySelector('.titleRecipes').innerHTML = `${titleRecipes}`
-
-//         const nameCreator = recipe.querySelector('.whatNameCreator').innerHTML
-//         modalOverlay.querySelector('.nameCreator').innerHTML = `${nameCreator}`
-
-//     })
-// }
-
-
-// document.querySelector('.button-close').addEventListener('click', function () {
-//     modalOverlay.classList.remove('active')
-//     modalOverlay.querySelector('img').src = ""
-//     modalOverlay.querySelector('.titleRecipes').innerHTML = ""
-//     modalOverlay.querySelector('.nameCreator').innerHTML = ""
+// buttonDescription.addEventListener('click', function (event) {
+//     if (infoDescription.style.display == "") {
+//         infoDescription.style.display = "none"
+//         buttonDescription.innerHTML = "MOSTRAR"
+//     } else {
+//         infoDescription.style.display = ""
+//         buttonDescription.innerHTML = "ESCONDER"
+//     }
 // })
 
-let buttonDescription = document.querySelector('.stuff-button')
-let infoDescription = document.querySelector('.fullStuff-description')
 
-// Script to hide/show menu
+//=== MOSTRAR E ESCONDER EM MAIS BOTOES===//
 
-buttonDescription.addEventListener('click', function (event) {
-    if (infoDescription.style.display == "") {
-        infoDescription.style.display = "none"
-        buttonDescription.innerHTML = "MOSTRAR"
-    } else {
-        infoDescription.style.display = ""
-        buttonDescription.innerHTML = "ESCONDER"
+// let buttonDescription = document.querySelector('.stuff-button')
+// let infoDescription = document.querySelector('.fullStuff-description')
+
+document.addEventListener('click', toggleDocs, true)
+
+function toggleDocs (event) {
+    if (event.target && event.target.className == 'stuff-button') {
+
+        let next = event.target.nextElementSibling
+
+        if (next.style.display == 'block') {
+            next.style.display = 'none'
+            
+
+        } else {
+            next.style.display = 'block'
+        }
     }
-})
+}
 
-// var button = document.querySelector('#menu-button');
-// var menu = document.querySelector('#menu');
-// button.addEventListener('click', function (event) {
-//       if (menu.style.display == "") {
-//           menu.style.display = "none";
-//           button.innerHTML = "Show Menu";
-//       } else {
-//           menu.style.display = "";
-//           button.innerHTML = "Hide Menu";
-//       }
+
+
+// document.addEventListener('click', toggleDocs, true);
+
+// function toggleDocs(event) {
+
+//     if (event.target && event.target.className == 'stuff-button') {
+
+//         var next = event.target.nextElementSibling;
+
+
+//         if (next.style.display == "none") {
+//             next.style.display = "block";
+
+//         } else {
+//             next.style.display = "none";
+//         }
 //     }
-//   );
+// }
+

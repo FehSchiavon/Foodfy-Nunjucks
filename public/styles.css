@@ -166,11 +166,15 @@ main .about-foodfy p {
 }
 
 .stuff-button {
-    margin: 10px 8px 0px 8px;
-    align-items: flex-end;
+    margin: -37px 0px 0px 145px;
     color: #999;
     font: 600 12px Roboto;
     background-color: #fff;
+    cursor: pointer;
+}
+
+.stuff-button-list {
+    margin-top: 20px;
 }
 
 .fullStuff-description {
