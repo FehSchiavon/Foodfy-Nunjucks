@@ -160,3 +160,29 @@ main .about-foodfy p {
     font-size: 20px;
     color: #777;
 }
+
+.stuff-description {
+    display: flex;
+}
+
+.stuff-button {
+    margin: 10px 8px 0px 8px;
+    align-items: flex-end;
+    color: #999;
+    font: 600 12px Roboto;
+    background-color: #fff;
+}
+
+.fullStuff-description {
+    margin-top: 20px;
+    margin-bottom: 40px ;
+    line-height: 28px;
+    font-size: 18px;
+    color: #444;
+}
+
+.fullStuff-description li {
+    margin-left: 17px;
+}
+
+
