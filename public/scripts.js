@@ -1,27 +1,42 @@
-const modalOverlay = document.querySelector('.modal-overlay')
-const recipes = document.querySelectorAll('.type-recipes')
+//=== MOSTRAR E ESCONDER EM MAIS BOTOES===//
 
+document.addEventListener('click', toggleDocs, true)
+// let buttonDescription = document.querySelector('.stuff-button')
 
-for (let recipe of recipes) {
-    recipe.addEventListener('click', function(){
-        modalOverlay.classList.add('active')
+function toggleDocs (event) {
+    if (event.target && event.target.className == 'stuff-button') {
 
-        const typeRecipesImg = recipe.getAttribute('id')
-        modalOverlay.querySelector('img').src = `../layouts/assets/${typeRecipesImg}.png`
+        let next = event.target.nextElementSibling
 
-        const titleRecipes = recipe.querySelector('.whatRecipes').innerHTML
-        modalOverlay.querySelector('.titleRecipes').innerHTML = `${titleRecipes}`
+        if (next.style.display == 'block') {
+            next.style.display = 'none'
+            // buttonDescription.innerHTML = "MOSTRAR"
 
-        const nameCreator = recipe.querySelector('.whatNameCreator').innerHTML
-        modalOverlay.querySelector('.nameCreator').innerHTML = `${nameCreator}`
-
-    })
+        } else {
+            next.style.display = 'block'
+            // buttonDescription.innerHTML = "ESCONDER"
+        }
+    }
 }
 
 
-document.querySelector('.button-close').addEventListener('click', function () {
-    modalOverlay.classList.remove('active')
-    modalOverlay.querySelector('img').src = ""
-    modalOverlay.querySelector('.titleRecipes').innerHTML = ""
-    modalOverlay.querySelector('.nameCreator').innerHTML = ""
-})
+
+
+// document.addEventListener('click', toggleDocs, true);
+
+// function toggleDocs(event) {
+
+//     if (event.target && event.target.className == 'stuff-button') {
+
+//         var next = event.target.nextElementSibling;
+
+
+//         if (next.style.display == "none") {
+//             next.style.display = "block";
+
+//         } else {
+//             next.style.display = "none";
+//         }
+//     }
+// }
+
