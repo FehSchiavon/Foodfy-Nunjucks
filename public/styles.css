@@ -166,7 +166,6 @@ main .about-foodfy p {
 }
 
 .stuff-button {
-    margin: -37px 0px 0px 145px;
     color: #999;
     font: 600 12px Roboto;
     background-color: #fff;
@@ -175,6 +174,18 @@ main .about-foodfy p {
 
 .stuff-button-list {
     margin-top: 20px;
+}
+
+#ingridient-position {
+    margin: -37px 0px 0px 145px;
+}
+
+#preparation-position {
+    margin: -37px 0px 0px 195px;
+}
+
+#extra-position {
+    margin: -37px 0px 0px 262px;
 }
 
 .fullStuff-description {

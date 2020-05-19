@@ -1,25 +1,7 @@
-//=== MOSTRAR E ESCONDER DOS BOTÕES (Porém não esta em todos os botões) ===//
-
-// let buttonDescription = document.querySelector('.stuff-button')
-// let infoDescription = document.querySelector('.fullStuff-description')
-
-// buttonDescription.addEventListener('click', function (event) {
-//     if (infoDescription.style.display == "") {
-//         infoDescription.style.display = "none"
-//         buttonDescription.innerHTML = "MOSTRAR"
-//     } else {
-//         infoDescription.style.display = ""
-//         buttonDescription.innerHTML = "ESCONDER"
-//     }
-// })
-
-
 //=== MOSTRAR E ESCONDER EM MAIS BOTOES===//
 
-// let buttonDescription = document.querySelector('.stuff-button')
-// let infoDescription = document.querySelector('.fullStuff-description')
-
 document.addEventListener('click', toggleDocs, true)
+// let buttonDescription = document.querySelector('.stuff-button')
 
 function toggleDocs (event) {
     if (event.target && event.target.className == 'stuff-button') {
@@ -28,13 +10,15 @@ function toggleDocs (event) {
 
         if (next.style.display == 'block') {
             next.style.display = 'none'
-            
+            // buttonDescription.innerHTML = "MOSTRAR"
 
         } else {
             next.style.display = 'block'
+            // buttonDescription.innerHTML = "ESCONDER"
         }
     }
 }
+
 
 
 
