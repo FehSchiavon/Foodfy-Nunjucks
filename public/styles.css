@@ -143,6 +143,10 @@ main .about-foodfy p {
     border-radius: 15px;
 }
 
+.slider-description img {
+    border-radius: 15px;
+}
+
 .name-recipe {
     margin-top: 50px;
     text-align: center;

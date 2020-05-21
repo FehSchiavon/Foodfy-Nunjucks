@@ -27,8 +27,37 @@ server.get("/recipes", function (req, res) {
 })
 
 server.get("/description", function (req, res) {
-    return res.render('description')
+
+    return res.render('description', { recipes })
 })
+
+// Assim de usa Params 
+// server.get("/recipes/:id", function (req, res) {
+//     res.send('Criando index' + req.params.id)
+// })
+
+server.get("/recipes/:index", function (req, res) {
+    
+    const recipeIndex = req.params.index
+    return res.render("description", { item: receitas[recipeIndex] })
+})
+
+
+// server.get("/recipes/:index", function (req, res) {
+
+//     const recipes = data;
+
+//     const recipeIndex = req.params.index;
+  
+//     // if (!recipes[receipeIndex]) {
+//     //     return res.status(404).render("not-found");
+//     // }
+
+//     return res.render('recipe', {
+//         recipe: receipes[receipeIndex]
+//     })
+// })
+  
 
 server.listen(3000, function() {
     console.log("server is running")
