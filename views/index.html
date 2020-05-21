@@ -19,10 +19,10 @@
 <section>
     <div class="recipes">
         {% for recipe in recipes %}
-        <div class="type-recipes" id="{{recipe.id}}">
-            <img src="/assets/{{recipe.id}}.png" alt="{{recipe.typeRecipe}}">
-            <h3 class="whatRecipes">{{recipe.typeRecipe}}</h3>
-            <p class="whatNameCreator">{{recipe.authorRecipe}}</p>
+        <div class="type-recipes">
+            <img src="{{recipe.image}}" alt="{{recipe.title}}">
+            <h3 class="whatRecipes">{{recipe.title}}</h3>
+            <p class="whatNameCreator">{{recipe.author}}</p>
         </div>
         {% endfor %}
     </div>

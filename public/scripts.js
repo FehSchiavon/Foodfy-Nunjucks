@@ -1,4 +1,4 @@
-//=== MOSTRAR E ESCONDER EM MAIS BOTOES===//
+//=== ABRIR E FECHAR BLOCK DE CONTEUDO ===//
 
 document.addEventListener('click', toggleDocs, true)
 
@@ -15,6 +15,8 @@ function toggleDocs (event) {
         }
     }
 }
+
+// MUDAR DE NOME (MOSTRAR/ESCONDER)
 
 function ingridient() {
     let ingridient = document.querySelector('#ingridient-position')
@@ -42,3 +44,15 @@ function extra() {
         extra.innerHTML = "ESCONDER";
     }
 }
+
+//===ROTAS===//
+
+const receitas = document.querySelectorAll(".type-recipes")
+
+for (let i = 0; i < receitas.length; i++) {
+    receitas[i].addEventListener("click", function() {
+        window.location.href = `/recipes/${i}`
+    })
+}
+
+
