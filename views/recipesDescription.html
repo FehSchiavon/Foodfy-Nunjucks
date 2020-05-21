@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block head %}
+<title>Mais informações</title>
+{% endblock %}
+
+{% block content %}
+
+<div class="slider-description">
+    {% for recipe in item %}
+    <img src="{{recipe.image}}" alt="{{recipe.title}}">
+    {% endfor %}
+</div>
+
+<div class="name-recipe">
+    {% for recipe in item %}
+        <h3>{{recipe.title}}</h3>
+        <p>{{recipe.author}}</p>
+    {% endfor%}
+</div>
+
+
+<div class="content-description">
+    <div class="stuff-description">
+        <h2 class="stuff-description">Ingredientes</h2>
+    </div>
+    
+    <div class="fullStuff-description">
+        <p class="stuff-button" id="ingridient-position" onclick="ingridient()">ESCONDER</p>
+        <ul class="stuff-button-list" style="display: block;">
+            {% for recipe in item %}
+                <li>{{recipe.ingredients[0]}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+    <div class="stuff-description">
+        <h2>Modo de preparo</h2>
+    </div>
+    
+    <div class="fullStuff-description">
+        <p class="stuff-button" id="preparation-position" onclick="preparation()">ESCONDER</p>
+        <ul class="stuff-button-list" style="display: block;">
+            {% for recipe in item %}
+                <li>{{recipe.preparation[0]}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+
+    <div class="stuff-description">
+        <h2>Informações adicionais</h2>
+    </div>
+
+    <div class="fullStuff-description">
+        <p class="stuff-button" id="extra-position" onclick="extra()">ESCONDER</p>
+        <div class="stuff-button-list" style="display: block;">
+            {% for recipe in item %}
+                <p>{{recipe.information}}</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

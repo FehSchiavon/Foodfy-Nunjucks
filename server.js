@@ -26,20 +26,21 @@ server.get("/recipes", function (req, res) {
     return res.render('recipes', { recipes })
 })
 
-server.get("/description", function (req, res) {
+// server.get("/description", function (req, res) {
 
-    return res.render('description', { recipes })
-})
+//     return res.render('description', { recipes })
+// })
 
 // Assim de usa Params 
 // server.get("/recipes/:id", function (req, res) {
 //     res.send('Criando index' + req.params.id)
 // })
 
+
 server.get("/recipes/:index", function (req, res) {
-    
+
     const recipeIndex = req.params.index
-    return res.render("description", { item: receitas[recipeIndex] })
+    return res.render("recipesDescription", { item: receitas[recipeIndex] })
 })
 
 
