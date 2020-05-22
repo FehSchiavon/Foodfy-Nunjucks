@@ -16,7 +16,7 @@ function toggleDocs (event) {
     }
 }
 
-// MUDAR DE NOME (MOSTRAR/ESCONDER)
+//===MUDAR DE NOME (MOSTRAR/ESCONDER)===//
 
 function ingridient() {
     let ingridient = document.querySelector('#ingridient-position')
@@ -47,10 +47,10 @@ function extra() {
 
 //===ROTAS===//
 
-const receitas = document.querySelectorAll(".type-recipes")
+const recipes = document.querySelectorAll(".type-recipes")
 
-for (let i = 0; i < receitas.length; i++) {
-    receitas[i].addEventListener("click", function() {
+for (let i = 0; i < recipes.length; i++) {
+    recipes[i].addEventListener("click", function() {
         window.location.href = `/recipes/${i}`
     })
 }
