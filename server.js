@@ -40,7 +40,7 @@ server.get("/recipes/:index", function (req, res) {
     const recipeIndex = req.params.index
     console.log(recipeIndex)
 
-    const recipe = [recipes[recipeIndex]]
+    const recipe = recipes[recipeIndex]
     console.log(recipe)
 
     return res.render("recipesDescription", { item: recipe })
@@ -63,5 +63,5 @@ server.get("/recipes/:index", function (req, res) {
   
 
 server.listen(3000, function() {
-    console.log("server is running")
+    console.log("server is running - Port:3000")
 })

@@ -7,15 +7,15 @@
 {% block content %}
 
 <div class="slider-description">
-    {% for recipe in item %}
-    <img src="{{recipe.image}}" alt="{{recipe.title}}">
+    {% for image in recipe.image %}
+    <img src="{{image}}" alt="">
     {% endfor %}
 </div>
 
 <div class="name-recipe">
-    {% for recipe in item %}
-        <h3>{{recipe.title}}</h3>
-        <p>{{recipe.author}}</p>
+    {% for name in recipe %}
+        <h3>{{name.title}}</h3>
+        <p>{{name.author}}</p>
     {% endfor%}
 </div>
 
@@ -28,11 +28,8 @@
     <div class="fullStuff-description">
         <p class="stuff-button" id="ingridient-position" onclick="ingridient()">ESCONDER</p>
         <ul class="stuff-button-list" style="display: block;">
-            {% for recipe in item %}
-                <li>{{recipe.ingredients}}</li>
-                <li>{{recipe.ingredients[1]}}</li>
-                <li>{{recipe.ingredients[2]}}</li>
-                <li>{{recipe.ingredients[loop.index]}}</li>
+            {% for ingredients in recipe.ingredients %}
+                <li>{{ingredients}}</li>
             {% endfor %}
         </ul>
     </div>
@@ -44,8 +41,8 @@
     <div class="fullStuff-description">
         <p class="stuff-button" id="preparation-position" onclick="preparation()">ESCONDER</p>
         <ul class="stuff-button-list" style="display: block;">
-            {% for recipe in item %}
-                <li>{{recipe.preparation}}</li>
+            {% for preparation in recipe.preparation %}
+                <li>{{preparation}}</li>
             {% endfor %}
         </ul>
     </div>
@@ -58,9 +55,9 @@
     <div class="fullStuff-description">
         <p class="stuff-button" id="extra-position" onclick="extra()">ESCONDER</p>
         <div class="stuff-button-list" style="display: block;">
-            {% for recipe in item %}
-                <p>{{recipe.information}}</p>
-            {% endfor %}
+            <!-- {% for information in item.information %}
+                <p>{{information}}</p>
+            {% endfor %} -->
         </div>
     </div>
 </div>
