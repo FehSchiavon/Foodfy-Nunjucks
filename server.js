@@ -47,10 +47,10 @@ server.get("/recipes/:index", function (req, res) {
     const recipeIndex = req.params.index
     console.log(recipeIndex)
 
-    const recipe = [recipes]
+    const recipe = [recipes[recipeIndex]]
     console.log(recipe)
 
-    return res.render("recipesDescription", { item: recipe[recipeIndex] })
+    return res.render("recipesDescription", { item: recipe })
 })
 
 // server.get("/recipes/:index", function (req, res) {
