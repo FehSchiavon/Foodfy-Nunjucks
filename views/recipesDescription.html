@@ -30,6 +30,9 @@
         <ul class="stuff-button-list" style="display: block;">
             {% for recipe in item %}
                 <li>{{recipe.ingredients}}</li>
+                <li>{{recipe.ingredients[1]}}</li>
+                <li>{{recipe.ingredients[2]}}</li>
+                <li>{{recipe.ingredients[loop.index]}}</li>
             {% endfor %}
         </ul>
     </div>

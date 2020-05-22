@@ -36,13 +36,6 @@ server.get("/description", function (req, res) {
 //     res.send('Criando index' + req.params.id)
 // })
 
-
-// server.get("/recipes/:index", function (req, res) {
-
-//     const recipeIndex = req.params.index
-//     return res.render("recipesDescription", { item: receitas[recipeIndex] })
-// })
-
 server.get("/recipes/:index", function (req, res) {
     const recipeIndex = req.params.index
     console.log(recipeIndex)
