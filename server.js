@@ -26,10 +26,10 @@ server.get("/recipes", function (req, res) {
     return res.render('recipes', { recipes })
 })
 
-// server.get("/description", function (req, res) {
+server.get("/description", function (req, res) {
 
-//     return res.render('description', { recipes })
-// })
+    return res.render('description', { recipes })
+})
 
 // Assim de usa Params 
 // server.get("/recipes/:id", function (req, res) {
@@ -37,12 +37,21 @@ server.get("/recipes", function (req, res) {
 // })
 
 
+// server.get("/recipes/:index", function (req, res) {
+
+//     const recipeIndex = req.params.index
+//     return res.render("recipesDescription", { item: receitas[recipeIndex] })
+// })
+
 server.get("/recipes/:index", function (req, res) {
-
     const recipeIndex = req.params.index
-    return res.render("recipesDescription", { item: receitas[recipeIndex] })
-})
+    console.log(recipeIndex)
 
+    // const recipes = data[0]
+    // console.log(recipes)
+
+    return res.render("recipesDescription", { item: recipes[0] })
+})
 
 // server.get("/recipes/:index", function (req, res) {
 

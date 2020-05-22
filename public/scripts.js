@@ -16,7 +16,7 @@ function toggleDocs (event) {
     }
 }
 
-// MUDAR DE NOME (MOSTRAR/ESCONDER)
+//===MUDAR DE NOME (MOSTRAR/ESCONDER)===//
 
 function ingridient() {
     let ingridient = document.querySelector('#ingridient-position')
