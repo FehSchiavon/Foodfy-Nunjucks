@@ -32,8 +32,16 @@ server.get("/recipes/:index", function (req, res) {
     
     const recipe = recipes[recipeIndex]
     // console.log(recipe)
+
+    // if (!recipes[recipeIndex]) {
+    //     return res.render('not-found')
+    // }
     
     return res.render("recipesDescription", { item: recipe })
+})
+
+server.use(function(req, res) {
+    return res.status(404).render("not-found");
 })
 
 // Assim de usa Params 

@@ -205,3 +205,10 @@ main .about-foodfy p {
 }
 
 
+/* ===404=== */
+
+.not-found {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
