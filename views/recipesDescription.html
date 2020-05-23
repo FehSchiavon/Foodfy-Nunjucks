@@ -7,16 +7,12 @@
 {% block content %}
 
 <div class="slider-description">
-    {% for image in recipe.image %}
-    <img src="{{image}}" alt="">
-    {% endfor %}
+    <img src="{{item.image}}" alt="">
 </div>
 
 <div class="name-recipe">
-    {% for name in recipe %}
-        <h3>{{name.title}}</h3>
-        <p>{{name.author}}</p>
-    {% endfor%}
+        <h3>{{item.title}}</h3>
+        <p>{{item.author}}</p>
 </div>
 
 
@@ -28,7 +24,7 @@
     <div class="fullStuff-description">
         <p class="stuff-button" id="ingridient-position" onclick="ingridient()">ESCONDER</p>
         <ul class="stuff-button-list" style="display: block;">
-            {% for ingredients in recipe.ingredients %}
+            {% for ingredients in item.ingredients %}
                 <li>{{ingredients}}</li>
             {% endfor %}
         </ul>
@@ -41,7 +37,7 @@
     <div class="fullStuff-description">
         <p class="stuff-button" id="preparation-position" onclick="preparation()">ESCONDER</p>
         <ul class="stuff-button-list" style="display: block;">
-            {% for preparation in recipe.preparation %}
+            {% for preparation in item.preparation %}
                 <li>{{preparation}}</li>
             {% endfor %}
         </ul>
@@ -55,9 +51,7 @@
     <div class="fullStuff-description">
         <p class="stuff-button" id="extra-position" onclick="extra()">ESCONDER</p>
         <div class="stuff-button-list" style="display: block;">
-            <!-- {% for information in item.information %}
-                <p>{{information}}</p>
-            {% endfor %} -->
+            <p>{{item.information}}</p>
         </div>
     </div>
 </div>
