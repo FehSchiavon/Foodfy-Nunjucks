@@ -6,7 +6,7 @@ const recipes = require("./data")
 
 server.use(express.static('public'))
 
-server.set("view engine", "html")
+server.set("view engine", "njk")
 
 nunjucks.configure("views", {
     express: server,
@@ -26,40 +26,20 @@ server.get("/recipes", function (req, res) {
     return res.render('recipes', { recipes })
 })
 
-server.get("/description", function (req, res) {
-    return res.render('description', { recipes })
+server.get("/recipes/:index", function (req, res) {
+    const recipeIndex = req.params.index
+    // console.log(recipeIndex)
+    
+    const recipe = recipes[recipeIndex]
+    // console.log(recipe)
+    
+    return res.render("recipesDescription", { item: recipe })
 })
 
 // Assim de usa Params 
 // server.get("/recipes/:id", function (req, res) {
 //     res.send('Criando index' + req.params.id)
 // })
-
-server.get("/recipes/:index", function (req, res) {
-    const recipeIndex = req.params.index
-    console.log(recipeIndex)
-
-    const recipe = recipes[recipeIndex]
-    console.log(recipe)
-
-    return res.render("recipesDescription", { item: recipe })
-})
-
-// server.get("/recipes/:index", function (req, res) {
-
-//     const recipes = data;
-
-//     const recipeIndex = req.params.index;
-  
-//     // if (!recipes[receipeIndex]) {
-//     //     return res.status(404).render("not-found");
-//     // }
-
-//     return res.render('recipe', {
-//         recipe: receipes[receipeIndex]
-//     })
-// })
-  
 
 server.listen(3000, function() {
     console.log("server is running - Port:3000")

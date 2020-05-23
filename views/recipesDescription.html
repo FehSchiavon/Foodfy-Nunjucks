@@ -1,7 +1,7 @@
-{% extends "layout.html" %}
+{% extends "layout.njk" %}
 
 {% block head %}
-<title>Mais informações</title>
+<title>Mais informações {{item.title}}</title>
 {% endblock %}
 
 {% block content %}
@@ -51,7 +51,7 @@
     <div class="fullStuff-description">
         <p class="stuff-button" id="extra-position" onclick="extra()">ESCONDER</p>
         <div class="stuff-button-list" style="display: block;">
-            <p>{{item.information}}</p>
+            <p>{{item.information | striptags(true) | escape | nl2br}}</p>
         </div>
     </div>
 </div>

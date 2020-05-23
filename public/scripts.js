@@ -9,7 +9,6 @@ function toggleDocs (event) {
 
         if (next.style.display == 'block') {
             next.style.display = 'none'
-            
         } else {
             next.style.display = 'block'
         }
