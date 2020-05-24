@@ -27,10 +27,6 @@
   <a href="#memo-licença">Licença</a>
 </p>
 
-## :file_cabinet: Materiais
-
-- [Elementos principais do HTML](materiais/html.pdf)
-- [Propriedades importantes no CSS](materiais/css.pdf)
 
 ## :rocket: Desafios
 
